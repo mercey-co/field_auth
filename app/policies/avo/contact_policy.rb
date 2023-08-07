@@ -29,7 +29,7 @@ class Avo::ContactPolicy < ApplicationPolicy
     true
   end
 
-  def show_comments?
-    record.age < 18
+  def show_parents?
+    record.age.present? && record.age < 18
   end
 end

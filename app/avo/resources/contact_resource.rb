@@ -10,6 +10,9 @@ class ContactResource < Avo::BaseResource
   # Fields generated from the model
   field :name, as: :text
   field :age, as: :number
-  field :comments, as: :text, visible: ->(resource:) { resource.authorization.authorize_action(:show_comments?) }
+  with_options hide_on: :index, visible: ->(resource:) { resource.authorization.authorize_action(:show_parents?) } do
+    field :father_name, as: :text
+    field :mother_name, as: :text
+  end
   # add fields here
 end

@@ -3,7 +3,7 @@ class CreateContacts < ActiveRecord::Migration[7.0]
     create_table :contacts do |t|
       t.string :name
       t.integer :age
-      t.string :comments
+      t.string :father_name, :mother_name
 
       t.timestamps
     end
