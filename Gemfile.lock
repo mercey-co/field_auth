@@ -105,6 +105,10 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dry-initializer (3.1.1)
     erubi (1.12.0)
     globalid (1.1.0)
@@ -159,6 +163,8 @@ GEM
     public_suffix (5.0.3)
     puma (5.6.6)
       nio4r (~> 2.0)
+    pundit (2.3.1)
+      activesupport (>= 3.0.0)
     racc (1.7.1)
     rack (2.2.8)
     rack-test (2.1.0)
@@ -242,6 +248,7 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
+  arm64-darwin-22
   arm64-darwin-23
 
 DEPENDENCIES
@@ -249,9 +256,11 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   importmap-rails
   jbuilder
   puma (~> 5.0)
+  pundit
   rails (~> 7.0.6)
   redis (~> 4.0)
   selenium-webdriver
